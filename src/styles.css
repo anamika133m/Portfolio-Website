@@ -26,21 +26,24 @@ nav {
   background-color: #6bb9e8;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   box-shadow: 0px 5px 5px rgb(221, 215, 215);
-  padding: 8px;
+  /* padding: 0.50%; */
+  width: 100%;
   margin: 0;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  align-items: baseline;
 }
 
 nav ul {
   display: flex;
   align-items: center;
+  gap: 2vw;
 }
 
 nav ul li {
   list-style: none;
   font-size: 18px;
-  margin-right: 30px;
+  /* margin-right: 10%; */
 
   /* &:last-child {
     margin-right: 0px;
@@ -58,11 +61,16 @@ nav ul li a {
   color: black;
 }
 
+nav .toggle {
+  display: none;
+
+}
+
 .brand {
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-family: sans-serif;
   font-size: 24px;
   align-self: center;
-  margin-left: 10px;
+  /* margin-left: 10px; */
 }
 
 /*navbar styling ends here*/
@@ -70,15 +78,14 @@ nav ul li a {
 /*About or main section starts here*/
 #main {
   margin: auto;
-  margin-top: 80px;
-  margin-bottom: 100px;
-  /* border: 1px solid red; */
-  width: 850px;
-  height: 350px;
+  margin-top: 15vh;
+  margin-bottom: 20vh;
+  width: 60vw;
+  height: fit-content;
   background-color: #f2f2f2;
   box-shadow: 5px 13px 15px rgb(221, 215, 215);
   padding: 20px;
-  padding-top: 30px;
+  /* padding-top: 30px; */
   display: flex;
 }
 
@@ -96,20 +103,20 @@ nav ul li a {
 }
 
 .logo {
-  width: 30px;
-  height: 30px;
-  padding: 4px;
+  /* width: 1vw; */
+  height: 4vh;
+  padding-left: 1%;
 }
 
 .profile {
-  height: 200px;
+  height: 25vh;
   border-radius: 50%;
 }
 
 #about {
   margin: auto;
-  height: 350px;
-  width: 850px;
+  width: 60vw;
+  height: fit-content;
   box-shadow: 0px 10px 15px rgb(221, 215, 215);
   padding: 10px;
   background-color: #f2f2f2;
@@ -140,8 +147,8 @@ nav ul li a {
 /*Skills section starts here*/
 #skills {
   margin: auto;
-  height: 350px;
-  width: 850px;
+  width: 60vw;
+  height: fit-content;
   box-shadow: 0px 10px 15px rgb(221, 215, 215);
   padding: 10px;
   background-color: #f2f2f2;
@@ -175,8 +182,8 @@ nav ul li a {
 /*Education section ends here*/
 #education {
   margin: auto;
-  height: 380px;
-  width: 850px;
+  width: 60vw;
+  height: fit-content;
   box-shadow: 0px 10px 15px rgb(221, 215, 215);
   padding: 10px;
   background-color: #f2f2f2;
@@ -196,8 +203,8 @@ nav ul li a {
 /*projects sections starts here */
 #projects {
   margin: auto;
-  height: 350px;
-  width: 850px;
+  width: 60vw;
+  height: fit-content;
   box-shadow: 0px 10px 15px rgb(221, 215, 215);
   padding: 10px;
   background-color: #f2f2f2;
@@ -216,8 +223,8 @@ nav ul li a {
 /*contact section starts here*/
 #contact {
   margin: auto;
-  height: 300px;
-  width: 850px;
+  width: 60vw;
+  height: fit-content;
   box-shadow: 0px 10px 15px rgb(221, 215, 215);
   padding: 10px;
   background-color: #f2f2f2;
@@ -233,13 +240,14 @@ nav ul li a {
 
 #contact form {
   /* margin-left: 230px; */
+  align-items: baseline;
   width: 350px;
   margin: auto;
 }
 
 #contact form input {
   padding: 5px;
-  width: 200px;
+  width: 20vw;
   border-radius: 5px;
   border: solid 1px rgb(143, 135, 135);
   margin: 6px;
@@ -257,7 +265,26 @@ nav ul li a {
 }
 
 #footer p {
-  margin-left: 45%;
+  text-align: center;
+  margin: auto;
+  width: 100%
 }
 
 /*footer section ends here*/
+
+@media only screen and (max-width: 600px) {
+
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    display: none;
+
+  }
+
+  nav .toggle {
+    display: block;
+    cursor: pointer;
+    font-size: 24px;
+    align-items: end;
+  }
+}
